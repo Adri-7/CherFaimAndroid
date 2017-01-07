@@ -9,14 +9,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.insa.notrehexa.drawer.activity_amis">
+    tools:context="com.insa.notrehexa.drawer.Activity_amis">
 
 
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        app:fabSize="mini"
+        app:fabSize="normal"
         app:srcCompat="@drawable/ic_add_black_24dp"
         android:id="@+id/floatingActionButton2"
         app:backgroundTint="@android:color/holo_purple"
@@ -242,3 +242,5 @@
     </ScrollView>
 
 </RelativeLayout>
+
+
