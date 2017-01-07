@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.view.ActionMode;
 
-public class activity_amis extends AppCompatActivity {
+public class Activity_amis extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
