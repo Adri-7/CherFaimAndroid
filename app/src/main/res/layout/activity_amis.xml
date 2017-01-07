@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.insa.notrehexa.drawer.Activity_amis">
+    tools:context="com.insa.notrehexa.drawer.activity_amis">
 
 
     <android.support.design.widget.FloatingActionButton

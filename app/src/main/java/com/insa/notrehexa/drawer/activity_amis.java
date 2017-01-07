@@ -2,6 +2,8 @@ package com.insa.notrehexa.drawer;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.support.v7.view.ActionMode;
 
 public class activity_amis extends AppCompatActivity {
 
@@ -9,5 +11,6 @@ public class activity_amis extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_amis);
+
     }
 }
