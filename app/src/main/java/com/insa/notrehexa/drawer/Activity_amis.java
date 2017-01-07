@@ -12,5 +12,9 @@ public class Activity_amis extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_amis);
 
+        try {
+            getSupportActionBar().hide();
+        } catch (Exception ignored) {}
+
     }
 }
