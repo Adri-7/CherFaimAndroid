@@ -20,7 +20,7 @@ public class Login extends AppCompatActivity {
         buttonFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in=new Intent(Login.this, MainActivity.class);
+                Intent in = new Intent(Login.this, MainActivity.class);
                 startActivity(in);
             }
         });
@@ -30,7 +30,7 @@ public class Login extends AppCompatActivity {
         buttonGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in=new Intent(Login.this, MainActivity.class);
+                Intent in= new Intent(Login.this, MainActivity.class);
                 startActivity(in);
             }
         });
