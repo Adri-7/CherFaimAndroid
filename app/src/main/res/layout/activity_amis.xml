@@ -12,66 +12,67 @@
 
 
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
+        app:backgroundTint="@android:color/holo_purple"
         app:fabSize="normal"
         app:srcCompat="@drawable/ic_add_black_24dp"
-        android:id="@+id/floatingActionButton2"
-        app:backgroundTint="@android:color/holo_purple"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <android.support.v7.widget.CardView
+            android:id="@+id/fake_toolbar"
             android:layout_width="419dp"
             android:layout_height="wrap_content"
-            android:minHeight="57dp"
-            app:cardBackgroundColor="?attr/colorPrimary"
-            android:id="@+id/fake_toolbar"
             android:layout_marginLeft="-5dp"
-            android:layout_marginRight="5dp">
+            android:layout_marginRight="5dp"
+            android:minHeight="57dp"
+            app:cardBackgroundColor="?attr/colorPrimary">
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
 
                 <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_arrow_back_white_24dp"
                     android:id="@+id/imageButton"
                     style="@style/Widget.AppCompat.ImageButton"
-                    android:background="@drawable/custom_empty"
-                    android:layout_weight="0.03" />
-
-                <TextView
-                    android:text="Amis"
-                    android:layout_width="wrap_content"
-                    android:layout_height="55dp"
-                    android:id="@+id/fake_toolbar"
-                    android:textSize="20sp"
-                    android:textAlignment="textStart"
-                    android:layout_gravity="bottom"
-                    android:gravity="center_vertical"
-                    android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
-                    android:textColor="@android:color/white"
-                    android:layout_weight="0.03" />
-
-                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_search_white_24dp"
+                    android:layout_weight="0.03"
+                    android:background="@drawable/custom_empty"
+                    app:srcCompat="@drawable/ic_arrow_back_white_24dp" />
+
+                <TextView
+                    android:id="@+id/fake_toolbar_amis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="0.03"
+                    android:gravity="center_vertical"
+                    android:text="Amis"
+                    android:textAlignment="textStart"
+                    android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <ImageButton
                     android:id="@+id/imageButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="0.04"
                     android:background="@drawable/custom_empty"
-                    android:visibility="visible" />
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_search_white_24dp" />
 
             </LinearLayout>
 
@@ -80,222 +81,211 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:paddingTop="10dp">
 
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:weightSum="1">
 
                 <android.support.v7.widget.CardView
+                    android:id="@+id/card_friends_proximity"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/card_friends_proximity"
                     android:layout_weight="0.45">
 
                     <ImageView
+                        android:id="@+id/friend_icon"
                         android:layout_width="62dp"
                         android:layout_height="63dp"
-                        app:srcCompat="@drawable/ic_person_black_24dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
                         android:layout_marginLeft="12dp"
                         android:layout_marginStart="12dp"
-                        android:layout_marginTop="41dp"
-                        android:id="@+id/friend_icon"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:background="@android:color/holo_blue_dark" />
+                        android:layout_marginTop="45dp"
+                        android:background="@android:color/holo_blue_dark"
+                        app:srcCompat="@drawable/ic_person_black_24dp" />
 
                     <TextView
-                        android:text="AMIS A PROXIMITE"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:drawableBottom="@android:color/black"
+                        android:drawableTop="@android:color/black"
+                        android:text="AMIS A PROXIMITE"
+                        android:textAlignment="textStart"
                         android:textColor="@android:color/holo_blue_dark"
                         android:textSize="20sp"
-                        android:textAlignment="textStart"
-                        android:drawableBottom="@android:color/black"
-                        android:drawableTop="@android:color/black"
                         android:textStyle="normal|bold" />
 
                     <TextView
-                        android:text="Voir plus d'amis"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="114dp"
-                        android:id="@+id/more_friends"
-                        android:textColor="@android:color/black"
-                        android:textSize="18sp"
-                        android:textStyle="normal|bold"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="100dp"
-                        android:textColorLink="?attr/colorPrimary"
-                        android:background="@drawable/custom_more_friends_proximity"
-                        android:paddingRight="10dp"
-                        android:paddingLeft="10dp"
-                        android:paddingBottom="5dp"
-                        android:paddingTop="5dp" />
-
-                    <TextView
-                        android:text="John Doe"
+                        android:id="@+id/friend_name_proximity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
                         android:layout_marginLeft="100dp"
                         android:layout_marginStart="100dp"
                         android:layout_marginTop="57dp"
-                        android:id="@+id/friend_name"
+                        android:text="John Doe"
                         android:textColor="@android:color/black"
                         android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/button_proximity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="120dp"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="100dp"
+                        android:background="@drawable/custom_more_friends_proximity"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Voir plus d'amis" />
+
 
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
+                    android:id="@+id/card_friends_recent"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="20dp"
-                    android:id="@+id/cards_friends_recent">
+                    android:layout_weight="0.45">
 
                     <ImageView
+                        android:id="@+id/friend_icon_recent"
                         android:layout_width="62dp"
                         android:layout_height="63dp"
-                        app:srcCompat="@drawable/ic_person_black_24dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
                         android:layout_marginLeft="12dp"
                         android:layout_marginStart="12dp"
-                        android:layout_marginTop="41dp"
-                        android:id="@+id/friend_icon"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:background="@android:color/holo_red_dark" />
+                        android:layout_marginTop="45dp"
+                        android:background="@android:color/holo_red_dark"
+                        app:srcCompat="@drawable/ic_person_black_24dp" />
 
                     <TextView
-                        android:text="CONTACTS RECENTS"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:drawableBottom="@android:color/black"
+                        android:drawableTop="@android:color/black"
+                        android:text="CONTACTS RECENTS"
+                        android:textAlignment="textStart"
                         android:textColor="@android:color/holo_red_dark"
                         android:textSize="20sp"
-                        android:textAlignment="textStart"
-                        android:drawableBottom="@android:color/black"
-                        android:drawableTop="@android:color/black"
                         android:textStyle="normal|bold" />
 
                     <TextView
-                        android:text="Voir plus d'amis"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="114dp"
-                        android:id="@+id/more_friends"
-                        android:textColor="@android:color/black"
-                        android:textSize="18sp"
-                        android:textStyle="normal|bold"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="100dp"
-                        android:textColorLink="?attr/colorPrimary"
-                        android:background="@drawable/custom_more_friends_recent"
-                        android:paddingRight="10dp"
-                        android:paddingLeft="10dp"
-                        android:paddingBottom="5dp"
-                        android:paddingTop="5dp" />
-
-                    <TextView
-                        android:text="Peter Parker"
+                        android:id="@+id/friend_name_recent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
                         android:layout_marginLeft="100dp"
                         android:layout_marginStart="100dp"
                         android:layout_marginTop="57dp"
-                        android:id="@+id/friend_name"
+                        android:text="Peter Parker"
                         android:textColor="@android:color/black"
                         android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/button_recent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="100dp"
+                        android:background="@drawable/custom_more_friends_recent"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Voir plus d'amis" />
 
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
+                    android:id="@+id/card_friends_other"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="20dp"
-                    android:id="@+id/cards_friends_others">
+                    android:layout_weight="0.45">
 
                     <ImageView
+                        android:id="@+id/friend_icon_other"
                         android:layout_width="62dp"
                         android:layout_height="63dp"
-                        app:srcCompat="@drawable/ic_person_black_24dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
                         android:layout_marginLeft="12dp"
                         android:layout_marginStart="12dp"
-                        android:layout_marginTop="41dp"
-                        android:id="@+id/friend_icon"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:background="@android:color/holo_green_dark" />
+                        android:layout_marginTop="45dp"
+                        android:background="@android:color/holo_green_dark"
+                        app:srcCompat="@drawable/ic_person_black_24dp" />
 
                     <TextView
-                        android:text="AUTRES AMIS"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:id="@+id/textView3"
-                        android:textColor="@android:color/holo_green_dark"
-                        android:textSize="20sp"
-                        android:textAlignment="textStart"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
                         android:drawableBottom="@android:color/black"
                         android:drawableTop="@android:color/black"
+                        android:text="AUTRES AMIS"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="20sp"
                         android:textStyle="normal|bold" />
 
                     <TextView
-                        android:text="Voir plus d'amis"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="114dp"
-                        android:id="@+id/more_friends"
-                        android:textColor="@android:color/black"
-                        android:textSize="18sp"
-                        android:textStyle="normal|bold"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="100dp"
-                        android:textColorLink="?attr/colorPrimary"
-                        android:background="@drawable/custom_more_friends_other"
-                        android:paddingRight="10dp"
-                        android:paddingLeft="10dp"
-                        android:paddingBottom="5dp"
-                        android:paddingTop="5dp" />
-
-                    <TextView
-                        android:text="Carl Doe"
+                        android:id="@+id/friend_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
                         android:layout_marginLeft="100dp"
                         android:layout_marginStart="100dp"
                         android:layout_marginTop="57dp"
-                        android:id="@+id/friend_name"
+                        android:text="Carl Doe"
                         android:textColor="@android:color/black"
                         android:textSize="18sp" />
 
+                    <Button
+                        android:id="@+id/button_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="100dp"
+                        android:background="@drawable/custom_more_friends_other"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Voir plus d'amis" />
+
                 </android.support.v7.widget.CardView>
+
             </LinearLayout>
         </ScrollView>
+
     </LinearLayout>
 
 </RelativeLayout>
