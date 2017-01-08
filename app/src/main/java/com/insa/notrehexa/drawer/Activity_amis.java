@@ -13,7 +13,7 @@ public class Activity_amis extends AppCompatActivity {
         setContentView(R.layout.activity_amis);
 
         try {
-            getSupportActionBar().hide();
+            //getSupportActionBar().hide();
         } catch (Exception ignored) {}
 
     }
