@@ -41,7 +41,8 @@
 
         <activity
             android:name=".DetailRestaurant"
-            android:label="@string/title_activity_detail_restaurant">
+            android:label="@string/title_activity_detail_restaurant"
+            android:theme="@style/DetailRestaurantTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
