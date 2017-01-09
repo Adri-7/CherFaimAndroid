@@ -1,61 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <group android:checkableBehavior="single">
+    <group>
         <item
-            android:id="@+id/prix_croissant"
             android:orderInCategory="100"
-            android:title="Prix croissant"
-            app:showAsAction="never"
-            android:checkable="true" />
+            android:title="Notifications"
+            app:showAsAction="always"
+            android:icon="@drawable/ic_notifications_white_24dp"/>
+        <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/prix_croissant"
+                android:orderInCategory="100"
+                android:title="Prix croissant"
+                app:showAsAction="never"
+                android:checkable="true" />
 
-        <item
-            android:id="@+id/prix_decroissant"
-            android:orderInCategory="100"
-            android:title="Prix décroissant"
-            app:showAsAction="never"
-            android:checkable="true" />
+            <item
+                android:id="@+id/prix_decroissant"
+                android:orderInCategory="100"
+                android:title="Prix décroissant"
+                app:showAsAction="never"
+                android:checkable="true" />
 
-        <item
-            android:id="@+id/attente_croissant"
-            android:orderInCategory="100"
-            android:title="Attente croissante"
-            app:showAsAction="never"
-            android:checkable="true" />
+            <item
+                android:id="@+id/attente_croissant"
+                android:orderInCategory="100"
+                android:title="Attente croissante"
+                app:showAsAction="never"
+                android:checkable="true" />
 
-        <item
-            android:id="@+id/attente_decroissant"
-            android:orderInCategory="100"
-            android:title="Attente décroissante"
-            app:showAsAction="never"
-            android:checkable="true" />
+            <item
+                android:id="@+id/attente_decroissant"
+                android:orderInCategory="100"
+                android:title="Attente décroissante"
+                app:showAsAction="never"
+                android:checkable="true" />
 
-        <item
-            android:id="@+id/distance_croissant"
-            android:orderInCategory="100"
-            android:title="Distance croissante"
-            app:showAsAction="never"
-            android:checkable="true" />
+            <item
+                android:id="@+id/distance_croissant"
+                android:orderInCategory="100"
+                android:title="Distance croissante"
+                app:showAsAction="never"
+                android:checkable="true" />
 
-        <item
-            android:id="@+id/distance_decroissant"
-            android:orderInCategory="100"
-            android:title="Distance décroissante"
-            app:showAsAction="never"
-            android:checkable="true" />
+            <item
+                android:id="@+id/distance_decroissant"
+                android:orderInCategory="100"
+                android:title="Distance décroissante"
+                app:showAsAction="never"
+                android:checkable="true" />
 
-        <item
-            android:id="@+id/amis_croissant"
-            android:orderInCategory="100"
-            android:title="Amis croissant"
-            app:showAsAction="never"
-            android:checkable="true" />
+            <item
+                android:id="@+id/amis_croissant"
+                android:orderInCategory="100"
+                android:title="Amis croissant"
+                app:showAsAction="never"
+                android:checkable="true" />
 
-        <item
-            android:id="@+id/amis_decroissant"
-            android:orderInCategory="100"
-            android:title="Amis décroissant"
-            app:showAsAction="never"
-            android:checkable="true" />
+            <item
+                android:id="@+id/amis_decroissant"
+                android:orderInCategory="100"
+                android:title="Amis décroissant"
+                app:showAsAction="never"
+                android:checkable="true" />
+        </group>
     </group>
 </menu>
