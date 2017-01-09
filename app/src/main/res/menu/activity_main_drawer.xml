@@ -7,7 +7,7 @@
             android:icon="@drawable/ic_local_dining_black_24dp"
             android:title="Restaurants" />
         <item
-            android:id="@+id/nav_com"
+            android:id="@+id/nav_communaute"
             android:icon="@drawable/ic_people_black_24dp"
             android:title="Communauté" />
         <item
@@ -18,7 +18,7 @@
 
     <group android:id="@+id/menu_bottom" android:checkableBehavior="none">
         <item
-            android:id="@+id/nav_param"
+            android:id="@+id/nav_params"
             android:icon="@drawable/ic_settings_black_24dp"
             android:title="Paramètres" />
     </group>

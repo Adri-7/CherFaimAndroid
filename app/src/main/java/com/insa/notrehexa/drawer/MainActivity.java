@@ -101,13 +101,13 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_resto) {
             Intent intent = new Intent(this, MainActivity.class);
             this.startActivity(intent);
-        } else if (id == R.id.nav_com) {
+        } else if (id == R.id.nav_communaute) {
             Intent intent = new Intent(this, AddFriendsActivity.class);
             this.startActivity(intent);
         } else if (id == R.id.nav_amis) {
             Intent intent = new Intent(this, Activity_amis.class);
             this.startActivity(intent);
-        }  else if (id == R.id.nav_param) {
+        }  else if (id == R.id.nav_params) {
 
         }
 
