@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    ​
+    ​
+    <group android:id="@+id/menu_community" android:checkableBehavior="single">
+        <item
+            android:id="@+id/distance_croissant_community"
+            android:title="Distance croissant"
+            android:orderInCategory="100"
+            app:showAsAction="never"
+            android:checkable="true" />
+        <item
+            android:id="@+id/distance_decroissan_communityt"
+            android:title="Distance décroissant"
+            android:orderInCategory="100"
+            app:showAsAction="never"
+            android:checkable="true" />
+        <item
+            android:id="@+id/attente_croissant_community"
+            android:title="Attente croissant"
+            android:orderInCategory="100"
+            app:showAsAction="never"
+            android:checkable="true" />
+        <item
+            android:id="@+id/attente_decroissant_community"
+            android:title="Attente décroissant"
+            android:orderInCategory="100"
+            app:showAsAction="never"
+            android:checkable="true" />
+    </group>
+    ​
+</menu>
