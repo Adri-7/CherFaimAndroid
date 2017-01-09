@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
 public class DetailsAmi extends AppCompatActivity {
-    final private static String amiName = "Jean Farget";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +17,6 @@ public class DetailsAmi extends AppCompatActivity {
         // Add Up Action to the action bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        getSupportActionBar().setTitle(amiName);
+        getSupportActionBar().setTitle("Francis Desforges");
     }
 }
