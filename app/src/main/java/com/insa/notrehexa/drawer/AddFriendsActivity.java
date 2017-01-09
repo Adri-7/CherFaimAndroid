@@ -3,9 +3,15 @@ package com.insa.notrehexa.drawer;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AddFriendsActivity extends AppCompatActivity {
 
@@ -23,6 +29,18 @@ public class AddFriendsActivity extends AppCompatActivity {
         // Add Up Action to the action bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        // Set the recycer view
+        List<FriendData> data = fill_with_data();
+
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerViewF);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(data, getApplication());
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        RecyclerView.ItemAnimator itemAnimator = new DefaultItemAnimator();
+        itemAnimator.setAddDuration(1000);
+        itemAnimator.setRemoveDuration(1000);
+        recyclerView.setItemAnimator(itemAnimator);
+
     }
 
     @Override
@@ -31,5 +49,17 @@ public class AddFriendsActivity extends AppCompatActivity {
         return true;
     }
 
+    public List<FriendData> fill_with_data() {
 
+        List<FriendData> data = new ArrayList<>();
+
+        data.add(new FriendData("Xavier Berthelette",R.drawable.icon_man_64dp));
+        data.add(new FriendData("Faye Thibault", R.drawable.icon_woman_64dp));
+        data.add(new FriendData("Peppin Séguin", R.drawable.icon_man_64dp));
+        data.add(new FriendData("Francis Desforges", R.drawable.icon_man_64dp));
+        data.add(new FriendData("Bruce Tachel", R.drawable.icon_man_64dp));
+        data.add(new FriendData("Roux Lanctot", R.drawable.icon_woman_64dp));
+
+        return data;
+    }
 }

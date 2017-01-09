@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddFriendsActivity"
-            android:label="Ajouter amis"
+            android:label="Retrouver des amis"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
             >

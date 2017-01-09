@@ -7,6 +7,8 @@
     tools:context="com.insa.notrehexa.drawer.AddFriendsActivity">
 
     <include
-        layout="@layout/toolbar_menu"></include>
+        layout="@layout/content_add_friends"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></include>
 
 </RelativeLayout>
