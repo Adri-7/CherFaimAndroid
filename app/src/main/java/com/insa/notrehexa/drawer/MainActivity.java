@@ -85,7 +85,10 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.prix_croissant) {
+        if (id == R.id.notifications) {
+            Intent intent = new Intent(this, Notifications.class);
+            this.startActivity(intent);
+
             return true;
         }
 
