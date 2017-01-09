@@ -3,22 +3,22 @@
 
     <group android:id="@+id/menu_top" android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_resto"
             android:icon="@drawable/ic_local_dining_black_24dp"
             android:title="Restaurants" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_com"
             android:icon="@drawable/ic_people_black_24dp"
             android:title="Communauté" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_amis"
             android:icon="@drawable/ic_person_black_24dp"
             android:title="Amis" />
     </group>
 
     <group android:id="@+id/menu_bottom" android:checkableBehavior="none">
         <item
-            android:id="@+id/nav_share"
+            android:id="@+id/nav_param"
             android:icon="@drawable/ic_settings_black_24dp"
             android:title="Paramètres" />
     </group>
