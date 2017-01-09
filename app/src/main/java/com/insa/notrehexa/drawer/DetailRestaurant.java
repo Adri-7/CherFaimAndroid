@@ -1,6 +1,6 @@
 package com.insa.notrehexa.drawer;
 
-import android.app.ActionBar;
+import android.support.v7.app.ActionBar;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -24,6 +24,7 @@ public class DetailRestaurant extends AppCompatActivity implements OnMapReadyCal
 
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setCustomView(R.layout.detail_restaurant_action_bar);
 
         /*

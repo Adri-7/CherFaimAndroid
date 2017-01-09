@@ -25,6 +25,7 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:id="@+id/rest_clickable_1"
                 android:layout_marginBottom="10dp" >
 
                 <ImageView
@@ -160,6 +161,7 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:id="@+id/rest_clickable_2"
                 android:layout_marginBottom="10dp" >
 
                 <ImageView
@@ -305,6 +307,7 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:id="@+id/rest_clickable_3"
                 android:layout_marginBottom="10dp" >
 
                 <ImageView
@@ -450,6 +453,7 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:id="@+id/rest_clickable_4"
                 android:layout_marginBottom="10dp" >
 
                 <ImageView

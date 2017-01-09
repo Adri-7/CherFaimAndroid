@@ -7,18 +7,6 @@
     >
 
     <TableRow>
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
-            android:layout_gravity="center_vertical"
-            android:background="@android:color/transparent"
-            android:id="@+id/action_bar_back"
-            android:tint="@color/common_google_signin_btn_text_dark_pressed"
-            />
-
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
