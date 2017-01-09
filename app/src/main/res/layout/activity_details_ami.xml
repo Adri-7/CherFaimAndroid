@@ -15,108 +15,114 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="30dp"
-            android:paddingBottom="10dp"
-            android:gravity="center_horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_man_128dp"
-                android:layout_marginBottom="10dp"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="FrancisD23"
-                android:textSize="17sp"
-                android:layout_marginBottom="10dp"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="06 26 45 64 64"
-                android:textSize="17sp"
-                android:autoLink="phone"
-                android:layout_marginBottom="10dp"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="francis.desfroges@gmail.fr"
-                android:autoLink="email"
-                android:textSize="17sp"
-                />
-        </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ses repas (2)"
-            android:textSize="17sp"
-            />
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
                 >
-                <android.support.v7.widget.CardView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_marginBottom="10dp" >
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="10dp"
+                    android:gravity="center_horizontal">
 
                     <ImageView
-                        android:layout_width="match_parent"
-                        app:srcCompat="@android:color/holo_blue_dark"
-                        android:alpha="0.5"
-                        android:layout_height="140dp" />
-
-                    <TextView
-                        android:text="RU Jussieux"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="85dp"
-                        android:layout_marginLeft="15dp"
-                        android:textSize="30sp"
-                        tools:text="RU Jussieux"
-                        android:textColorLink="@android:color/white"
-                        android:textColor="@android:color/white" />
+                        android:src="@drawable/icon_man_128dp"
+                        android:layout_marginBottom="10dp"
+                        />
 
-                </android.support.v7.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FrancisD23"
+                        android:textSize="17sp"
+                        android:layout_marginBottom="10dp"
+                        />
 
-                <android.support.v7.widget.CardView
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="06 26 45 64 64"
+                        android:textSize="17sp"
+                        android:autoLink="phone"
+                        android:layout_marginBottom="10dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="francis.desfroges@gmail.fr"
+                        android:autoLink="email"
+                        android:textSize="17sp"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ses repas (2)"
+                    android:textSize="17sp"
+                    />
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_marginBottom="10dp" >
-
-                    <ImageView
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
-                        app:srcCompat="@android:color/holo_orange_dark"
-                        android:alpha="0.5"
-                        android:layout_height="140dp" />
+                        android:layout_height="200dp"
+                        android:layout_marginBottom="10dp" >
 
-                    <TextView
-                        android:text="INSA Prévert"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="85dp"
-                        android:layout_marginLeft="15dp"
-                        android:textSize="30sp"
-                        tools:text="INSA Prévert"
-                        android:textColorLink="@android:color/white"
-                        android:textColor="@android:color/white" />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            app:srcCompat="@android:color/holo_blue_dark"
+                            android:alpha="0.5"
+                            android:layout_height="140dp" />
 
-                </android.support.v7.widget.CardView>
+                        <TextView
+                            android:text="RU Jussieux"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="85dp"
+                            android:layout_marginLeft="15dp"
+                            android:textSize="30sp"
+                            tools:text="RU Jussieux"
+                            android:textColorLink="@android:color/white"
+                            android:textColor="@android:color/white" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginBottom="10dp" >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            app:srcCompat="@android:color/holo_orange_dark"
+                            android:alpha="0.5"
+                            android:layout_height="140dp" />
+
+                        <TextView
+                            android:text="INSA Prévert"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="85dp"
+                            android:layout_marginLeft="15dp"
+                            android:textSize="30sp"
+                            tools:text="INSA Prévert"
+                            android:textColorLink="@android:color/white"
+                            android:textColor="@android:color/white" />
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
