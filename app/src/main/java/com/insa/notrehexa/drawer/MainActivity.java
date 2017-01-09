@@ -1,5 +1,6 @@
 package com.insa.notrehexa.drawer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -76,7 +77,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
-
+            Intent intent = new Intent(this, Activity_amis.class);
+            this.startActivity(intent);
         }  else if (id == R.id.nav_share) {
 
         }
