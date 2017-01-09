@@ -131,7 +131,7 @@
                             android:layout_marginLeft="12dp"
                             android:layout_marginStart="12dp"
                             android:layout_marginTop="45dp"
-                            android:background="@android:color/holo_blue_dark"
+                            android:background="@android:color/holo_blue_light"
                             app:srcCompat="@drawable/ic_person_black_24dp" />
 
                         <TextView
@@ -146,7 +146,7 @@
                             android:drawableTop="@android:color/black"
                             android:text="AMIS A PROXIMITE"
                             android:textAlignment="textStart"
-                            android:textColor="@android:color/holo_blue_dark"
+                            android:textColor="@android:color/holo_blue_light"
                             android:textSize="20sp"
                             android:textStyle="normal|bold" />
 
@@ -199,7 +199,7 @@
                             android:layout_marginLeft="12dp"
                             android:layout_marginStart="12dp"
                             android:layout_marginTop="45dp"
-                            android:background="@android:color/holo_red_dark"
+                            android:background="@android:color/holo_red_light"
                             app:srcCompat="@drawable/ic_person_black_24dp" />
 
                         <TextView
@@ -214,7 +214,7 @@
                             android:drawableTop="@android:color/black"
                             android:text="CONTACTS RECENTS"
                             android:textAlignment="textStart"
-                            android:textColor="@android:color/holo_red_dark"
+                            android:textColor="@android:color/holo_red_light"
                             android:textSize="20sp"
                             android:textStyle="normal|bold" />
 
@@ -268,7 +268,7 @@
                             android:layout_marginLeft="12dp"
                             android:layout_marginStart="12dp"
                             android:layout_marginTop="45dp"
-                            android:background="@android:color/holo_green_dark"
+                            android:background="@android:color/holo_green_light"
                             app:srcCompat="@drawable/ic_person_black_24dp" />
 
                         <TextView
@@ -283,7 +283,7 @@
                             android:drawableTop="@android:color/black"
                             android:text="AUTRES AMIS"
                             android:textAlignment="textStart"
-                            android:textColor="@android:color/holo_green_dark"
+                            android:textColor="@android:color/holo_green_light"
                             android:textSize="20sp"
                             android:textStyle="normal|bold" />
 
