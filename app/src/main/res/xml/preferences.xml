@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/activity_params"
+    android:layout_height="match_parent">
+
+    <SwitchPreference
+        android:key="pref_tel"
+        android:title="Afficher le numéro de téléphone"
+        android:summary="Communiquer votre numéro de téléphone à vos amis afin qu'ils puissent vous contacter."
+        android:defaultValue="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <SwitchPreference
+        android:key="pref_mail"
+        android:title="Afficher l'adresse électronique"
+        android:summary="Communiquer votre adresse électronique à vos amis afin qu'ils puissent vous contacter."
+        android:defaultValue="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <SwitchPreference
+        android:key="pref_identity"
+        android:title="Afficher uniquement le pseudonyme"
+        android:summary="Afficher uniquement votre pseudonyme à la place de votre identité complète."
+        android:defaultValue="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditTextPreference
+        android:defaultValue="Me"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Choisir un pseudonyme"
+        android:summary="Choisissez le pseudonyme sous lequel vous apparaîtrez pour les autres utilisateurs."
+        android:key="pref_pseudo" />
+
+
+</PreferenceScreen>
