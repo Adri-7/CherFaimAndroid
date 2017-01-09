@@ -102,7 +102,8 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, MainActivity.class);
             this.startActivity(intent);
         } else if (id == R.id.nav_com) {
-
+            Intent intent = new Intent(this, AddFriendsActivity.class);
+            this.startActivity(intent);
         } else if (id == R.id.nav_amis) {
             Intent intent = new Intent(this, Activity_amis.class);
             this.startActivity(intent);
