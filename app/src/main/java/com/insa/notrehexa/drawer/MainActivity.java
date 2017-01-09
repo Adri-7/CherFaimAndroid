@@ -36,6 +36,9 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        //Set le bon item dans le drawer
+        navigationView.getMenu().getItem(0).setChecked(true);
+
         initRestListeners();
     }
 
@@ -95,15 +98,16 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.amis) {
-            Intent intent = new Intent(this, Activity_amis.class);
+        if (id == R.id.nav_resto) {
+            Intent intent = new Intent(this, MainActivity.class);
             this.startActivity(intent);
-        } else if (id == R.id.communaute) {
+        } else if (id == R.id.nav_communaute) {
             Intent intent = new Intent(this, AddFriendsActivity.class);
             this.startActivity(intent);
-        } else if (id == R.id.parametres) {
-
-        }  else if (id == R.id.restaurants) {
+        } else if (id == R.id.nav_amis) {
+            Intent intent = new Intent(this, Activity_amis.class);
+            this.startActivity(intent);
+        }  else if (id == R.id.nav_params) {
 
         }
 
