@@ -94,6 +94,14 @@
             android:theme="@style/AppTheme.NoActionBar"
             >
         </activity>
+        <activity
+            android:name=".Notifications"
+            android:label="@string/title_activity_notifications"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" /></activity>
     </application>
 
 </manifest>
