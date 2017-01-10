@@ -53,12 +53,12 @@ public class AddFriendsActivity extends AppCompatActivity {
 
         List<FriendData> data = new ArrayList<>();
 
-        data.add(new FriendData("Xavier Berthelette",R.drawable.icon_man_64dp));
-        data.add(new FriendData("Faye Thibault", R.drawable.icon_woman_64dp));
-        data.add(new FriendData("Peppin Séguin", R.drawable.icon_man_64dp));
-        data.add(new FriendData("Francis Desforges", R.drawable.icon_man_64dp));
-        data.add(new FriendData("Bruce Tachel", R.drawable.icon_man_64dp));
-        data.add(new FriendData("Roux Lanctot", R.drawable.icon_woman_64dp));
+        data.add(new FriendData("Aubrey Bousquet",R.drawable.icon_man_64dp));
+        data.add(new FriendData("Villette Marcil", R.drawable.icon_woman_64dp));
+        data.add(new FriendData("Arnaude Gaulin", R.drawable.icon_woman_64dp));
+        data.add(new FriendData("Verney Breton", R.drawable.icon_man_64dp));
+        data.add(new FriendData("Bruce Gingras", R.drawable.icon_man_64dp));
+        data.add(new FriendData("Océane Savoie", R.drawable.icon_woman_64dp));
 
         return data;
     }
