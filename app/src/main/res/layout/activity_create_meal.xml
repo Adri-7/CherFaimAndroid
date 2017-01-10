@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
+        <android.support.design.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -28,7 +28,20 @@
                 android:contentDescription="Meal description"
                 android:adjustViewBounds="true"
                 android:layout_height="wrap_content" />
-        </RelativeLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_photo_black_24dp"
+                android:id="@+id/meal_change_photo"
+                app:backgroundTint="?attr/colorButtonNormal"
+                app:layout_anchor="@id/meal_image"
+                app:layout_anchorGravity="bottom|right"
+                android:layout_margin="5dp"
+                android:fadingEdge="horizontal|vertical" />
+        </android.support.design.widget.CoordinatorLayout>
 
         <ScrollView
             android:layout_height="match_parent"
@@ -45,63 +58,62 @@
                 android:weightSum="1">
 
 
-                <android.support.design.widget.TextInputLayout
+                <EditText
+                    android:drawableLeft="@drawable/ic_person_black_24dp"
+                    android:drawableStart="@drawable/ic_person_black_24dp"
+                    android:drawablePadding="5dp"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <EditText
-                        android:drawableLeft="@drawable/ic_person_black_24dp"
-                        android:drawableStart="@drawable/ic_person_black_24dp"
-                        android:drawablePadding="2dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Nom"
-                        android:id="@+id/meal_name"
-                        android:inputType="text"
-                        android:maxLines="1" />
-
-                </android.support.design.widget.TextInputLayout>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:drawableLeft="@drawable/ic_place_black_24dp"
-                        android:drawableStart="@drawable/ic_place_black_24dp"
-                        android:drawablePadding="2dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Commencez à taper le lieu..."
-                        android:id="@+id/meal_place"
-                        android:inputType="text" />
-                </android.support.design.widget.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    android:hint="Nom"
+                    android:id="@+id/meal_name"
+                    android:inputType="text"
+                    android:maxLines="1" />
 
                 <EditText
+                    android:drawableLeft="@drawable/ic_place_black_24dp"
+                    android:drawableStart="@drawable/ic_place_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Commencez à taper le lieu..."
+                    android:id="@+id/meal_place"
+                    android:inputType="text" />
+
+                <EditText
+                    android:focusable="false"
                     android:drawableLeft="@drawable/ic_event_black_24dp"
                     android:drawableStart="@drawable/ic_event_black_24dp"
-                    android:drawablePadding="2dp"
+                    android:drawablePadding="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="date"
                     android:ems="10"
                     android:id="@+id/meal_date"
-                    android:hint="Date, Heure" />
+                    android:hint="Date de rendez-vous"
+                    android:layout_weight="1" />
 
-                <android.support.design.widget.TextInputLayout
+                <EditText
+                    android:focusable="false"
+                    android:drawableLeft="@drawable/ic_alarm_black_24dp"
+                    android:drawableStart="@drawable/ic_alarm_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="time"
+                    android:ems="10"
+                    android:id="@+id/meal_time"
+                    android:layout_weight="1"
+                    android:hint="Heure de rendez-vous" />
+
+                <EditText
+                    android:drawableLeft="@drawable/ic_person_add_black_24dp"
+                    android:drawableStart="@drawable/ic_person_add_black_24dp"
+                    android:drawablePadding="5dp"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <EditText
-                        android:drawableLeft="@drawable/ic_person_add_black_24dp"
-                        android:drawableStart="@drawable/ic_person_add_black_24dp"
-                        android:drawablePadding="2dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Inviter une personne…"
-                        android:id="@+id/meal_new_person" />
-
-                </android.support.design.widget.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    android:hint="Inviter une personne…"
+                    android:id="@+id/meal_new_person"
+                    android:maxLines="1" />
 
                 <TextView
                     android:text="Participants"
