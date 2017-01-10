@@ -87,8 +87,7 @@ public class FriendsActivity extends AppCompatActivity
             Intent intent = new Intent(this, MainActivity.class);
             this.startActivity(intent);
         } else if (id == R.id.nav_communaute) {
-            Intent intent = new Intent(this, AddFriendsActivity.class);
-            this.startActivity(intent);
+            
         } else if (id == R.id.nav_amis) {
             Intent intent = new Intent(this, FriendsActivity.class);
             this.startActivity(intent);
