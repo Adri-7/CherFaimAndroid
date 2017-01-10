@@ -114,6 +114,25 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+       
+        <activity
+            android:name=".CreateMealActivity"
+            android:exported="true"
+            android:label="Créer un repas"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".EditMealActivity"
+            android:exported="true"
+            android:label="Éditer un repas"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".DetailsRepas"
             android:label="Repas"
