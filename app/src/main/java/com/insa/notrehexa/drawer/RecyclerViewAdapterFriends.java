@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 import java.util.Collections;
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class RecyclerViewAdapterFriends extends RecyclerView.Adapter<ViewHolder> {
     List<FriendData> list = Collections.emptyList();
     Context context;
 
-    public RecyclerViewAdapter(List<FriendData> list, Context context) {
+    public RecyclerViewAdapterFriends(List<FriendData> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -22,7 +22,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //Inflate the layout, initialize the View Holder
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_layout_add_friends, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_layout_friend, parent, false);
 
         View.OnClickListener detailsAmi = new View.OnClickListener() {
             public void onClick(View view) {

@@ -1,7 +1,6 @@
 package com.insa.notrehexa.drawer;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,40 +9,29 @@ import android.view.ViewGroup;
 import java.util.Collections;
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
-    List<FriendData> list = Collections.emptyList();
+public class NotificationViewAdapter extends RecyclerView.Adapter<NotificationViewHolder> {
+    List<NotificationData> list = Collections.emptyList();
     Context context;
 
-    public RecyclerViewAdapter(List<FriendData> list, Context context) {
+    public NotificationViewAdapter(List<NotificationData> list, Context context) {
         this.list = list;
         this.context = context;
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public NotificationViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //Inflate the layout, initialize the View Holder
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_layout_add_friends, parent, false);
-
-        View.OnClickListener detailsAmi = new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), DetailsAmi.class);
-                view.getContext().startActivity(intent);
-            }
-        };
-
-        v.setOnClickListener(detailsAmi);
-
-        ViewHolder holder = new ViewHolder(v);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.notification_layout, parent, false);
+        NotificationViewHolder holder = new NotificationViewHolder(v);
         return holder;
 
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-
+    public void onBindViewHolder(NotificationViewHolder holder, int position) {
         //Use the provided View Holder on the onCreateViewHolder method to populate the current row on the RecyclerView
-        holder.name.setText(list.get(position).name);
-        holder.image.setImageResource(list.get(position).image);
+        holder.message.setText(list.get(position).message);
+        holder.imageView.setImageResource(list.get(position).imageId);
 
         //animate(holder);
 
@@ -61,7 +49,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     // Insert a new item to the RecyclerView on a predefined position
-    public void insert(int position, FriendData data) {
+    public void insert(int position, NotificationData data) {
         list.add(position, data);
         notifyItemInserted(position);
     }

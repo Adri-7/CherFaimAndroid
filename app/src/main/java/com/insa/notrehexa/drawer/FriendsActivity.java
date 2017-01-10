@@ -3,30 +3,34 @@ package com.insa.notrehexa.drawer;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.widget.CardView;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.view.View;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+import java.util.ArrayList;
+import java.util.List;
+
+public class FriendsActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_friends);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // Setting the drawer
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -37,27 +41,30 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         //Set le bon item dans le drawer
-        navigationView.getMenu().getItem(0).setChecked(true);
+        navigationView.getMenu().getItem(2).setChecked(true);
 
-        initRestListeners();
-    }
-
-    private void initRestListeners() {
-        View.OnClickListener detailRestListener = new View.OnClickListener() {
+        // Launching the AddFriendsActivity
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), DetailRestaurant.class);
+                Intent intent = new Intent(view.getContext(), AddFriendsActivity.class);
                 view.getContext().startActivity(intent);
             }
-        };
+        });
 
-        CardView rest = (CardView) findViewById(R.id.rest_clickable_1);
-        rest.setOnClickListener(detailRestListener);
-        rest = (CardView) findViewById(R.id.rest_clickable_2);
-        rest.setOnClickListener(detailRestListener);
-        rest = (CardView) findViewById(R.id.rest_clickable_3);
-        rest.setOnClickListener(detailRestListener);
-        rest = (CardView) findViewById(R.id.rest_clickable_4);
-        rest.setOnClickListener(detailRestListener);
+        // Set the recycer view
+        List<FriendData> data = fill_with_data();
+
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerViewF);
+        RecyclerViewAdapterFriends adapter = new RecyclerViewAdapterFriends(data, getApplication());
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        RecyclerView.ItemAnimator itemAnimator = new DefaultItemAnimator();
+        itemAnimator.setAddDuration(1000);
+        itemAnimator.setRemoveDuration(1000);
+        recyclerView.setItemAnimator(itemAnimator);
+
     }
 
     @Override
@@ -68,31 +75,6 @@ public class MainActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.notifications) {
-            Intent intent = new Intent(this, Notifications.class);
-            this.startActivity(intent);
-
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -118,5 +100,19 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public List<FriendData> fill_with_data() {
+
+        List<FriendData> data = new ArrayList<>();
+
+        data.add(new FriendData("Xavier Berthelette",R.drawable.icon_man_64dp));
+        data.add(new FriendData("Faye Thibault", R.drawable.icon_woman_64dp));
+        data.add(new FriendData("Peppin Séguin", R.drawable.icon_man_64dp));
+        data.add(new FriendData("Francis Desforges", R.drawable.icon_man_64dp));
+        data.add(new FriendData("Bruce Tachel", R.drawable.icon_man_64dp));
+        data.add(new FriendData("Roux Lanctot", R.drawable.icon_woman_64dp));
+
+        return data;
     }
 }
