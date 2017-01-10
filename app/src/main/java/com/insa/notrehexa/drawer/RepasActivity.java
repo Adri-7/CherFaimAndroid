@@ -81,9 +81,6 @@ public class RepasActivity extends AppCompatActivity
 
         //Set le bon item dans le drawer
         navigationView.getMenu().getItem(1).setChecked(true);
-
-        // Add Up Action to the action bar
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
@@ -174,7 +171,7 @@ public class RepasActivity extends AppCompatActivity
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_repas, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+            TextView textView = (TextView) rootView.findViewById(R.id.container);
             textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
         }
