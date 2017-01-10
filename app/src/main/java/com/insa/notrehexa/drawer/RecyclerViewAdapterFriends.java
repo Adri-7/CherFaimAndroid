@@ -1,6 +1,7 @@
 package com.insa.notrehexa.drawer;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,16 @@ public class RecyclerViewAdapterFriends extends RecyclerView.Adapter<ViewHolder>
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //Inflate the layout, initialize the View Holder
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_layout_friend, parent, false);
+
+        View.OnClickListener detailsAmi = new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), DetailsAmi.class);
+                view.getContext().startActivity(intent);
+            }
+        };
+
+        v.setOnClickListener(detailsAmi);
+
         ViewHolder holder = new ViewHolder(v);
         return holder;
 
