@@ -41,7 +41,7 @@ public class FriendsActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         //Set le bon item dans le drawer
-        navigationView.getMenu().getItem(0).setChecked(true);
+        navigationView.getMenu().getItem(2).setChecked(true);
 
         // Launching the AddFriendsActivity
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -87,7 +87,8 @@ public class FriendsActivity extends AppCompatActivity
             Intent intent = new Intent(this, MainActivity.class);
             this.startActivity(intent);
         } else if (id == R.id.nav_communaute) {
-            
+            Intent intent = new Intent(this, RepasActivity.class);
+            this.startActivity(intent);
         } else if (id == R.id.nav_amis) {
             Intent intent = new Intent(this, FriendsActivity.class);
             this.startActivity(intent);

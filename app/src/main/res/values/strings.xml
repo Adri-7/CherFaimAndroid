@@ -27,6 +27,5 @@
     <string name="title_activity_friends">Amis</string>
     <string name="title_activity_notifications">Notifications</string>
     <string name="title_activity_repas">Repas</string>
-    <string name="title_activity_tteesssttt">TTEESSSTTT</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_details_repas">Repas</string>
 </resources>
