@@ -25,10 +25,8 @@ public class DetailsAmi extends AppCompatActivity {
 
         View.OnClickListener detailsRepasListener = new View.OnClickListener() {
             public void onClick(View view) {
-                /*
-                Intent intent = new Intent(view.getContext(), DetailRestaurant.class);
+                Intent intent = new Intent(view.getContext(), DetailsRepas.class);
                 view.getContext().startActivity(intent);
-                */
             }
         };
 
