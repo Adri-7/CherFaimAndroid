@@ -64,7 +64,12 @@ public class RepasActivity extends AppCompatActivity {
             }
         });
         */
+        // Set the defined toolbar as the action bar
+        toolbar = (Toolbar) findViewById(R.id.toolbar_layout_repas);
+        setSupportActionBar(toolbar);
 
+        // Add Up Action to the action bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 
@@ -72,6 +77,8 @@ public class RepasActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_repas, menu);
+        // Search icon
+        getMenuInflater().inflate(R.menu.menu_search, menu);
         return true;
     }
 

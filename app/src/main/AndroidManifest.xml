@@ -79,7 +79,11 @@
         <activity
             android:name=".RepasActivity"
             android:label="@string/title_activity_repas"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" >
+        <meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value=".MainActivity" />
+        </activity>
     </application>
 
 </manifest>
