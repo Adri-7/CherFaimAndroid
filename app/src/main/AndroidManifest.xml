@@ -44,12 +44,12 @@
         </activity>
         <activity
             android:name=".AddFriendsActivity"
-            android:label="Retrouver des amis"
-            android:parentActivityName=".MainActivity"
+            android:label="Ajouter des amis"
+            android:parentActivityName=".FriendsActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".FriendsActivity" />
         </activity>
         <activity
             android:name=".Activity_amis"
@@ -75,6 +75,15 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".FriendsActivity"
+            android:label="@string/title_activity_friends"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.insa.notrehexa.drawer.MainActivity" />
         </activity>
     </application>
 
