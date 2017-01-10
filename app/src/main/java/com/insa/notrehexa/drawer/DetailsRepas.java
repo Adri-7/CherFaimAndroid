@@ -4,6 +4,7 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -53,5 +54,15 @@ public class DetailsRepas extends AppCompatActivity implements OnMapReadyCallbac
         mMap.addMarker(new MarkerOptions().position(ruJussieu).title("RU Jussieu"));
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(ruJussieu));
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ruJussieu, 17.0f));
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            onBackPressed();
+            return  true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
