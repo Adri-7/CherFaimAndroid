@@ -25,4 +25,5 @@
         completions."
     </string>
     <string name="title_activity_notifications">Notifications</string>
+    <string name="title_activity_repas">Repas</string>
 </resources>
