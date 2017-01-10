@@ -85,7 +85,10 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.prix_croissant) {
+        if (id == R.id.notifications) {
+            Intent intent = new Intent(this, Notifications.class);
+            this.startActivity(intent);
+
             return true;
         }
 
@@ -102,7 +105,8 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, MainActivity.class);
             this.startActivity(intent);
         } else if (id == R.id.nav_communaute) {
-
+            Intent intent = new Intent(this, RepasActivity.class);
+            this.startActivity(intent);
         } else if (id == R.id.nav_amis) {
             Intent intent = new Intent(this, FriendsActivity.class);
             this.startActivity(intent);
