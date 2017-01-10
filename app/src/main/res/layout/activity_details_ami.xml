@@ -28,7 +28,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingTop="30dp"
+                    android:paddingTop="15dp"
                     android:paddingBottom="10dp"
                     android:gravity="center_horizontal">
 
@@ -37,6 +37,8 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/icon_man_128dp"
                         android:layout_marginBottom="10dp"
+                        android:padding="25dp"
+                        android:background="@drawable/circle_background"
                         />
 
                     <TextView
