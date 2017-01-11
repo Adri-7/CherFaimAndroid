@@ -21,6 +21,14 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
 public class RestauDetailsActivity extends AppCompatActivity {
 
     /**
@@ -56,9 +64,7 @@ public class RestauDetailsActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -81,12 +87,14 @@ public class RestauDetailsActivity extends AppCompatActivity {
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends Fragment {
+    public static class PlaceholderFragment extends Fragment implements OnMapReadyCallback {
         /**
          * The fragment argument representing the section number for this
          * fragment.
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
+
+        private GoogleMap mMap;
 
         public PlaceholderFragment() {
         }
@@ -107,9 +115,15 @@ public class RestauDetailsActivity extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = null;
+
             if (getArguments().getInt(ARG_SECTION_NUMBER) == 1){
                 // Here goes the code for section 1
                 rootView = inflater.inflate(R.layout.fragment_restau_details, container, false);
+
+                // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+                MapFragment mapFragment = (MapFragment) getActivity().getFragmentManager()
+                        .findFragmentById(R.id.map);
+                mapFragment.getMapAsync(this);
             } else {
                 // Here goes the code for section 2
                 rootView = inflater.inflate(R.layout.fragment_resto_repas, container, false);
@@ -121,6 +135,16 @@ public class RestauDetailsActivity extends AppCompatActivity {
                 };
             }
             return rootView;
+        }
+
+        @Override
+        public void onMapReady(GoogleMap googleMap) {
+            mMap = googleMap;
+
+            // Add a marker in Sydney and move the camera
+            LatLng ruJussieu = new LatLng(45.780854, 4.876195);
+            mMap.addMarker(new MarkerOptions().position(ruJussieu).title("RU Jussieu"));
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(ruJussieu, 17.0f));
         }
     }
 
