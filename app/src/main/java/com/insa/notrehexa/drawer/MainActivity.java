@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity
     private void initRestListeners() {
         View.OnClickListener detailRestListener = new View.OnClickListener() {
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), DetailRestaurant.class);
+                Intent intent = new Intent(view.getContext(), RestauDetailsActivity.class);
                 view.getContext().startActivity(intent);
             }
         };

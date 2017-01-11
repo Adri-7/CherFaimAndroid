@@ -134,6 +134,15 @@
                 android:value=".RepasActivity" />
         </activity>
         <activity
+            android:name=".RestauDetailsActivity"
+            android:label="Détails"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.insa.notrehexa.drawer.MainActivity" />
+        </activity>
+        <activity
             android:name=".DetailsRepas"
             android:label="Repas"
             android:theme="@style/AppTheme.NoActionBar">
