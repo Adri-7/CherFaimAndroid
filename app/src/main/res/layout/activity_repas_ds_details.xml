@@ -34,7 +34,8 @@
 
                         <android.support.v7.widget.CardView
                             android:layout_width="match_parent"
-                            android:layout_height="114dp" >
+                            android:layout_height="114dp"
+                            android:onClick="detailsRepasListener">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -43,7 +44,7 @@
                                 android:id="@+id/imageView3" />
 
                             <TextView
-                                android:text="Des amis"
+                                android:text="On a faim"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/textView6"
@@ -188,7 +189,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    app:cardElevation="2dp">
+                    app:cardElevation="2dp"
+                    android:onClick="detailsRepasListener">
 
                     <LinearLayout
                         android:orientation="vertical"
