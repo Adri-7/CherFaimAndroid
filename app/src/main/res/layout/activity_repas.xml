@@ -49,7 +49,7 @@
             android:clickable="true"
             app:fabSize="normal"
             app:srcCompat="@drawable/ic_add_black_24dp"
-            android:id="@+id/floatingActionButton"
+            android:id="@+id/addRepas"
             android:layout_gravity="bottom|right"
             android:layout_marginBottom="@dimen/fab_margin"
             android:layout_marginRight="@dimen/fab_margin"

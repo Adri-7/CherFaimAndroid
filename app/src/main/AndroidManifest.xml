@@ -128,10 +128,10 @@
             android:name=".EditMealActivity"
             android:exported="true"
             android:label="Éditer un repas"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".RepasActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".RepasActivity" />
         </activity>
         <activity
             android:name=".RestauDetailsActivity"

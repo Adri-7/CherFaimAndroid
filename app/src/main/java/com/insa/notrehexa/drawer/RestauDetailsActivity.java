@@ -1,9 +1,11 @@
 package com.insa.notrehexa.drawer;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 
 import android.support.v4.app.Fragment;
@@ -111,12 +113,21 @@ public class RestauDetailsActivity extends AppCompatActivity {
             } else {
                 // Here goes the code for section 2
                 rootView = inflater.inflate(R.layout.fragment_resto_repas, container, false);
+                View.OnClickListener detailsRepasListener = new View.OnClickListener() {
+                    public void onClick(View view) {
+                        Intent intent = new Intent(view.getContext(), DetailsRepas.class);
+                        view.getContext().startActivity(intent);
+                    }
+                };
             }
             return rootView;
         }
     }
 
-
+    public void detailsRepasListener(View view){
+        Intent intent = new Intent(view.getContext(), DetailsRepas.class);
+        view.getContext().startActivity(intent);
+    }
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.

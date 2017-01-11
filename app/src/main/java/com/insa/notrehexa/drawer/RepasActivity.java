@@ -62,9 +62,6 @@ public class RepasActivity extends AppCompatActivity
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-
-
-
         // Set the defined toolbar as the action bar
         toolbar = (Toolbar) findViewById(R.id.toolbar_layout_repas);
         setSupportActionBar(toolbar);
@@ -81,6 +78,17 @@ public class RepasActivity extends AppCompatActivity
 
         //Set le bon item dans le drawer
         navigationView.getMenu().getItem(1).setChecked(true);
+
+        // Add action on click on fab
+        FloatingActionButton button = (FloatingActionButton) findViewById(R.id.addRepas);
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), CreateMealActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

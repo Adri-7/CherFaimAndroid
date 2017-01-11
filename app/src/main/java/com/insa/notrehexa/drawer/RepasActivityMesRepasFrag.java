@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 
@@ -41,6 +42,26 @@ public class RepasActivityMesRepasFrag extends Fragment {
         repas.setOnClickListener(detailsRepasListener);
         repas = (CardView) rootView.findViewById(R.id.mes_carte_repas_2);
         repas.setOnClickListener(detailsRepasListener);
+
+        ImageButton b = (ImageButton) rootView.findViewById(R.id.imageButton2);
+        b.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), EditMealActivity.class);
+                view.getContext().startActivity(intent);
+            }
+        });
+
+        b = (ImageButton) rootView.findViewById(R.id.imageButton22);
+        b.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), EditMealActivity.class);
+                view.getContext().startActivity(intent);
+            }
+        });
 
         return rootView;
     }
