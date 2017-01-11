@@ -41,6 +41,8 @@ public class RepasActivitySuggestionsFrag extends Fragment {
         repas.setOnClickListener(detailsRepasListener);
         repas = (CardView) rootView.findViewById(R.id.suggestion_carte_repas_2);
         repas.setOnClickListener(detailsRepasListener);
+        repas = (CardView) rootView.findViewById(R.id.suggestion_carte_repas_3);
+        repas.setOnClickListener(detailsRepasListener);
 
         return rootView;
     }
