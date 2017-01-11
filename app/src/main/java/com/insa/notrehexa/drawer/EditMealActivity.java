@@ -22,9 +22,9 @@ public class EditMealActivity extends CreateMealActivity {
         final LinearLayout content = (LinearLayout) findViewById(R.id.meal_content);
         final ImageView photo = (ImageView) findViewById(R.id.meal_image);
 
-        date.setText("12/01/2016");
-        time.setText("12:00");
-        name.setText("Groupe de projet");
+        date.setText("15/01/2017");
+        time.setText("12:20");
+        name.setText("On a faim");
         place.setText("RU Jussieu");
         photo.setImageResource(R.drawable.meal_example);
         View v = LayoutInflater.from(content.getContext()).inflate(R.layout.sample_meal_participant, content, false);
