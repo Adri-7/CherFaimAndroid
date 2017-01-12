@@ -65,14 +65,6 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".DetailRestaurant"
-            android:label="@string/title_activity_detail_restaurant"
-            android:theme="@style/DetailRestaurantTheme">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-        <activity
             android:name=".ParamsActivity"
             android:label="Paramètres"
             android:parentActivityName=".MainActivity">
