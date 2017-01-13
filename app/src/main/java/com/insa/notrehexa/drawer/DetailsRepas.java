@@ -1,10 +1,13 @@
 package com.insa.notrehexa.drawer;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -28,6 +31,20 @@ public class DetailsRepas extends AppCompatActivity implements OnMapReadyCallbac
 
         // Add Up Action to the action bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        View.OnClickListener detailsAmiListener = new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), DetailsAmi.class);
+                view.getContext().startActivity(intent);
+            }
+        };
+
+        CardView repas = (CardView) findViewById(R.id.carte_ami_1);
+        repas.setOnClickListener(detailsAmiListener);
+        repas = (CardView) findViewById(R.id.carte_ami_2);
+        repas.setOnClickListener(detailsAmiListener);
+        repas = (CardView) findViewById(R.id.carte_ami_3);
+        repas.setOnClickListener(detailsAmiListener);
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
